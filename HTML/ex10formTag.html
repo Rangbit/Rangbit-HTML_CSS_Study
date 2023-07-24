@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form tag</title>
+</head>
+<body>
+    <!-- 웹페이지에 입력폼을 만들때 사용 
+        action - 폼 데이터가 전송되는 url
+        method - 폼 데이터 전송방식(get/post)
+        name - 해당 form태그의 이름 지정
+    -->
+    <form action="#">
+        <h3>Title</h3>
+        <!-- input
+            placeholder : 미리보기 텍스트
+            autofocus : 자동커서 설정
+            maxlength : 글자수 제한 지정
+         -->
+        <label for="userID">ID</label>
+        <input type="text" id="userID" autofocus placeholder="아이디를 입력해주세요"><button>중복확인</button><br>
+        <label for="userPW">PW</label>
+        <input type="password" id="userPW" maxlength="16" placeholder="비밀번호를 입력해주세요"><br>
+        <label>Address <input type="text" placeholder="주소를 입력하세요"></label><br>
+        <button>Login</button><br><br><br>
+        <h3>메일주소를 입력해주세요</h3>
+        <input type="text" name="" id="">@
+        <select>
+            <option>직접 입력하기</option>
+            <option>naver.com</option>
+            <option>daum.net</option>
+            <option>google.com</option>
+        </select>
+        <h3>자기소개를 작성하시오</h3>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <!-- 
+            checkbox - 다중선택 O
+            radio  - 다중선택 X
+         -->
+        <h3>해당하는것을 모두 선택하세요</h3>
+        <label>로봇이 아닌가요?<input type="checkbox" name="human" id="" value="human1"></label><br>
+        <label>사람이 맞나요?<input type="checkbox" name="human" id="" value="human2"></label><br>
+        <label>정말 사람이 맞나요?<input type="checkbox" name="human" id="" value="human3"></label><br>
+        <button>제출하기</button><br>
+        <h3>당신은 무얼 드시나요?</h3>
+        <label>Apple<input type="radio" name="eat" id="food"></label>
+        <label>Oil<input type="radio" name="eat" id="robot"></label>
+        <label>rice<input type="radio" name="eat" id="food"></label><br><br><br>
+        
+        <h3> 추가정보를 입력해주세요 </h3>
+        사진을 제출해주세요 <br>
+         <input type="file" name="" id=""><br>
+         <input type="color" name="" id="">
+         <input type="number" name="" id="">
+         <input type="range" name="" id="">
+         <input type="date" name="" id=""><br><br><br>
+
+         <!-- 제출 및 초기화 -->
+         <input type="submit">
+         <input type="reset">
+         
+
+        </form>
+</body>
+</html>

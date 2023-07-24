@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table tag</title>
+</head>
+<body>
+    <!-- 테이블공간 만들기 -->
+    <table border="10px solid pink">
+        <!-- 테이블 한줄 추가 -->
+        <tr bgcolor = "pink">
+            <!-- 제목설정 태그 -->
+            <th>이름</th>
+            <!-- column 묶음(가로셀 병합) -->
+            <th colspan="2">성별/주소</th>
+            <th>비고</th>
+        </tr>
+        <tr>
+            <!-- 내용 -->
+            <td>name1</td>
+            <td>Female</td>
+            <td>address1</td>
+            <!-- row 묶음(세로셀 병합) -->
+            <td rowspan="2"> F</td>
+        </tr>
+        <tr>
+            <td>name2</td>
+            <td>Female</td>
+            <td>address2</td>
+        </tr>
+        <tr>
+            <td>name3</td>
+            <td>Male</td>
+            <td>address3</td>
+            <td rowspan="2"> M</td>
+        </tr>
+        <tr>
+            <td>name4</td>
+            <td>Male</td>
+            <td>address4</td>
+        </tr>
+    </table>
+</body>
+</html>
