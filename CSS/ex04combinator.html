@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinator</title>
+    <style>
+        /* 계층선택자 
+        1.자손선택자 >> A B
+        2.자식선택자 >> A>B
+        3.근접후행선택자 >> A+B
+        4.후행선택자 >> A~B
+        A기준으로 B선택
+        */
+
+        /* div -> span,li 자손선택자 */
+        div span{
+            color: coral;
+        }
+
+        div li{
+            color: #7756f0;
+        }
+        /* ol -> span 자식선택자 */
+        ol>span{
+            color: forestgreen;
+        }
+        /* li 기준 형제 li선택 근접후행선택자 */
+        .firstli+li{
+            color: #f0ed56;
+        }
+        /* li 기준 모든형제선택 후행선택자 */
+        .firstli~li{
+            color: aqua;
+        }
+        /* 그룹선택자 */
+        li,span{
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <strong> Rule</strong>
+        <ol>
+            <li class="firstli">지각X</li>
+            <li>결석X</li>
+            <span>매일매일</span>
+            <li>복습O</li>
+        </ol>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

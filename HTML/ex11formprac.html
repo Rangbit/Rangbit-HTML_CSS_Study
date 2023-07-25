@@ -1,44 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sign up</title>
 </head>
+
 <body>
     <form action="#">
         <table width="400px">
             <tr height="50px" bgcolor="gray">
-                <th colspan="2"><center>아이디/비밀번호 입력</center></th>
+                <th colspan="2">
+                    <center>아이디/비밀번호 입력</center>
+                </th>
             </tr>
             <tr>
-                <td height="35px" bgcolor="whitesmoke" align="right">아이디 : </td><td><input type="text" name="" id=""></td>
+                <td height="35px" bgcolor="whitesmoke" align="right">아이디 : </td>
+                <td height="35px" bgcolor="whitesmoke" align="left"><input type="text" name="" id=""></td>
             </tr>
             <tr>
-                <td height="35px" bgcolor="whitesmoke" align="right">비밀번호 : </td><td><input type="text" name="" id=""></td>
+                <td height="35px" bgcolor="whitesmoke" align="right">비밀번호 : </td>
+                <td height="35px" bgcolor="whitesmoke" align="left"><input type="text" name="" id=""></td>
             </tr>
             <tr>
-                <td height="35px" bgcolor="whitesmoke" align="right">비밀번호 확인 : </td><td><input type="text" name="" id=""></td>
+                <td height="35px" bgcolor="whitesmoke" align="right">비밀번호 확인 : </td>
+                <td height="35px" bgcolor="whitesmoke" align="left"><input type="text" name="" id=""></td>
             </tr>
+            <!--  -->
             <tr height="50px" bgcolor="gray">
-                <th colspan="2"><center>개인정보</center></th>
+                <th colspan="2">
+                    <center>개인정보</center>
+                </th>
             </tr>
             <tr>
-                <td height="35px" bgcolor="whitesmoke" align="right">성별 : </td><td><input type="text" name="" id=""></td>
+                <td height="35px" bgcolor="whitesmoke" align="right">성별 : </td>
+                <td height="35px" bgcolor="whitesmoke" align="left">남<input type="radio" name="se" id=""
+                        value="male">여<input type="radio" name="se" id="" value="female"></td>
             </tr>
             <tr>
                 <td height="35px" bgcolor="whitesmoke" align="right">혈액형 : </td>
-                <select name="" id="">
-                    <option>A형</option>
-                    <option>B형</option>
-                    <option>O형</option>
-                    <option>AB형</option>
-                </select>
+                <td height="35px" bgcolor="whitesmoke" align="left">
+                    <select name="bloodtype" id="">
+                        <option value="atype">A형</option>
+                        <option value="btype">B형</option>
+                        <option value="ctype">O형</option>
+                        <option value="abtype">AB형</option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <td height="35px" bgcolor="whitesmoke" align="right">생년월일 : </td><input type="date" name="" id="">
+                <td height="35px" bgcolor="whitesmoke" align="right">생년월일 : </td>
+                <td height="35px" bgcolor="whitesmoke" align="left"><input type="date" name="" id=""></td>
+            </tr>
+            <!--  -->
+            <tr height="50px" bgcolor="gray">
+                <th colspan="2">
+                    <center>선호도</center>
+                </th>
+            </tr>
+            <tr>
+                <td height="35px" bgcolor="whitesmoke" align="right">취미 : </td>
+                <td height="35px" bgcolor="whitesmoke" align="left">축구<input type="checkbox" name="hobby" id=""
+                        value="football">
+                    야구<input type="checkbox" name="hobby" id="" value="baseball">
+                    농구<input type="checkbox" name="hobby" id="" value="basketball"></td>
+            </tr>
+            <tr>
+                <td height="35px" bgcolor="whitesmoke" align="right">좋아하는 색상 : </td>
+                <td height="35px" bgcolor="whitesmoke" align="left"><input type="color" name="" id=""></td>
+            </tr>
+            <!--  -->
+            <tr height="50px" bgcolor="gray">
+                <th colspan="2">
+                    <center>적고 싶은 말</center>
+                </th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <center><textarea name="" id="" cols="53px" rows="5px"></textarea></center>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <center>
+                        <input type="submit">
+                        <input type="reset">
+                    </center>
+                </td>
             </tr>
         </table>
     </form>
 </body>
+
 </html>

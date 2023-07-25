@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cascade</title>
+    <style>
+        /* 우선순위 */
+        /* 전체선택자(0) < 태그선택자(1) < class선택자(10) < id선택자(100) < inline 선택자 */
+        /* !important 최상위 우선순위 */
+        *{
+            color: green;
+        }
+        li{
+            color: red;
+        }
+        #idsel{
+            color: blue;
+        }
+        .classsel{
+            color: yellow !important;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="classsel">HTML</li>
+        <li id="idsel" class="classsel" style="color: aqua;">CSS</li>
+        <li>JS</li>
+    </ul>
+</body>
+</html>

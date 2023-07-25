@@ -1,0 +1,46 @@
+/* 1. 전체선택자 */
+
+*{
+    font-family: serif;
+    margin:10;
+    padding:10;
+    text-decoration-color: #080808;
+}
+
+/* 2. 태그선택자 */
+
+li{
+    font-size: 20px;
+}
+
+/* 
+id >> 중복사용 불가능 문서당 한번
+class >> 중복사용 가능 재사용성
+*/
+
+/* 3. id선택자 -> #표시 */
+
+#water{
+    background-color: #00ffff;
+    width: 100px;
+}
+
+/* 4.class선택자 -> . 표시 */
+
+.notwater{
+    background-color: #808080;
+    width: 100px;
+}
+
+.one{
+    text-decoration: line-through;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.pick{
+    background-color: #add8e6;
+    width: 100px;
+}
