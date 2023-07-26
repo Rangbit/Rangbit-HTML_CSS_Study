@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display2</title>
+    <style>
+        .answer{
+            display: none;   
+        }
+        .question:hover+.answer {
+            display: inline;
+        }
+        /* 
+        display : none -> 영역차지X
+        visibility : hidden -> 영역차지O        
+        */
+
+    </style>
+</head>
+<body>
+    <span class="question">Q. 오늘은 무슨요일인가요?</span>
+    <br><br>
+    <span class="answer">A. 수요일입니다.</span>
+    <br><br>
+    <br><br>
+    <span class="question">Q. ?</span>
+    <br><br>
+    <span class="answer">A. ?</span>
+</body>
+</html>

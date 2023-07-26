@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display3</title>
+    <style>
+        /*         1. h3 요소 아래에 먹고 싶은 점심 메뉴 이미지 넣기
+           (이미지 주소 복사를 통해 웹 페이지에 있는 이미지 가져오기)
+        2. 이미지 요소 보이지 않게 설정하기
+        3. h3 요소를 클릭하면 이미지가 나타나도록 설정하기 */
+        #food{
+            display: none;
+        }
+        #menu:active+#food{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+
+    <h3 id="menu">점심메뉴</h3>
+    <span id="food"><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA2MjVfMjIg%2FMDAxNjg3Njk0NTYxNTAz.akUld31x4G5zjH9UHD2SM16YsLReXmyXvO7r08QsWQAg.Yam8H_kKFkP7wLPanfyNcHO8uitK5qzoECAG7LokM9Ig.JPEG.tlaaudqh11%2FIMG_3640.JPG&type=sc960_832" alt=""></span>
+    <span id="food"><img src="" alt=""></span>
+</body>
+</html>

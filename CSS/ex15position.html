@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <link rel="stylesheet" href="boxModel.css">
+    <style>
+        #redBox{
+            position: static; /* 기본값 */
+            top: 30px; /* 적용 X */
+        }
+        #blueBox{
+            position: relative; /* 기존위치에서 움직일때 */
+            bottom: 30px;
+            left: 20px;
+        }
+        #parent{
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+        #greenBox{
+            position: absolute;  /* 기준 : static이 아닌 부모요소, 없다면 body기준 */
+            top: 15px;
+            left: 60px;
+        }
+        #grayBox{
+            position: fixed; /* 기준 : body ,부모/스크롤 무시 화면고정*/
+            top: 145px;
+            left: 70px;
+        }
+    </style>
+</head>
+<body>
+    <dir id="parent">
+        <div id="redBox"></div>
+        <div id="blueBox"></div>
+        <div id="greenBox"></div>
+        <div id="grayBox"></div>
+    </dir>
+</body>
+</html>

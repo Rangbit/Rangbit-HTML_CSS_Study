@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font size</title>
+    <style>
+        *{
+            font-size: 28px;
+        }
+        #pxFont{
+            font-size: 16px;
+        }
+        div{
+            font-size: 10px;
+        }
+        #emFont{
+            /* 부모요소 크기에따른 배수단위 */
+            font-size: 1.5em;
+        }
+        #remFont{
+            /* html문서의 폰트크기에따른 배수단위 */
+            font-size: 1.5rem;
+        }
+        #wrap{
+            width: 800px;
+            height: 600px;
+            background-color: coral;
+        }
+        #container1{
+            width: 50%;
+            height: 7%;
+            background-color: aquamarine;
+        }
+        #container2{
+            /* 
+            vw를 height에서, vh를 width에서 사용가능
+            */
+            width: 50vw;
+            height: 60vh;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <p>폰트크기 기준</p>
+    <p id="pxFont">px로 조정</p>
+    <!-- div>p#emFont -->
+    <div>
+        <p id="emFont">em으로 조정</p>
+    </div>
+    <p id="remFont">rem으로 조정</p>
+
+
+    <div id="wrap">
+        <div id="container1"><center>Title</center></div>
+        <div id="container2"><img src="https://i.pinimg.com/564x/84/f8/5a/84f85a08ac3eee7f305af97d0fc700df.jpg" alt="" width="400px"></div>
+    </div>
+
+</body>
+
+</html>
