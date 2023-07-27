@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        flex : 아이템간의 공간배분 및 정렬
+        -> container : flex 영향을 받는 전체 공간
+        -> item : 설정된 속성에따라 배치되는것
+
+        main-axis : 아이템이 배치되는 축의 방향
+        cross-axis : 메인축과 수직이 되는 방향
+        */
+        .container{
+            background-color: beige;
+            display: flex;
+            flex-direction: row;
+            /* flex-direction : item이 배치되는 축의 방향을 결정
+            row : default 가로
+            column : 세로
+            */
+            flex-wrap: wrap;
+            /* flex-wrap : item들의 줄바꿈을 결정 
+            ->nowrap -> default 줄바꿈x
+            ->wrap -> 줄바꿈o
+            -wrap -> 줄바꿈o , 역순배치
+            */
+            
+            justify-content: space-evenly;
+            /* justify-content : 메인축 방향 아이템 정렬 지정 
+            -> flex-start : 시작점정렬, 기본값
+            -> flex-end : 끝점 정렬
+            -> center : 가운데 정렬
+            -> space-between : 아이템 사이의 균일한 여백
+            -> space-evenly : 아이템 사이와 양끝의 균일한 여백
+            -> space-around : 아이템 둘레 균일한 여백
+            */
+            
+        }
+        .item{
+            background-color: gray;
+            width: 200px;
+            height: 200px;
+            font-size: 3rem;
+            font-weight: bold;
+            border: 1px solid #000000;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* align-items : 수직정렬 */
+        }
+        .item1{
+            background-color: gray;
+            width: 300px;
+            height: 300px;
+            font-size: 3rem;
+            font-weight: bold;
+            border: 1px solid #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- .item{box$}*6 -->
+        <div class="item">box1</div>
+        <div class="item">box2</div>
+        <div class="item">box3</div>
+        <div class="item">box4</div>
+        <div class="item1">box5</div>
+        <div class="item">box6</div>
+    </div>
+</body>
+</html>

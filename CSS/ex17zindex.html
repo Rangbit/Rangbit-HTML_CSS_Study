@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zindex</title>
+    <style>
+        /* z-index : layer 순서지정 */
+        div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+        .item1{
+            background-color: lightblue;
+            z-index: 1;
+        }
+        .item2{
+            background-color: coral;
+            top: 50px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.item$*2 -->
+    <div class="item1"></div>
+    <div class="item2"></div>
+</body>
+</html>

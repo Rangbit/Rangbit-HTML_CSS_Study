@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header practice</title>
+    <style>
+        /* 1. ul tag flex container -> li 가로배치 */
+        ul{
+            display: flex;
+            list-style-type: none;
+            font-size: 1.2rem;
+            align-items: center;
+        }
+        /* 2. container div -> flex container -> imgsec&ul 가로배치 */
+        .container{
+            display: flex;
+            background-color: rgba(0, 255, 255, 0.1);
+            padding: 0 10%;
+            justify-content: space-between;
+        }
+        /* 3. imgsec div -> flex container -> img 가운데정렬 */
+        .imgsec{
+            display: flex;
+            align-items: center;
+        }
+        /* 4.li 형태 잡기 */
+        li{
+            margin: 0 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="imgsec">
+            <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="" height="150px">
+        </p>
+        <ul>
+            <li>카페</li>
+            <li>메일</li>
+            <li>뉴스</li>
+            <li>지도</li>
+            <li>증권</li>
+            <li>쇼핑</li>
+            <li>카카오TV</li>
+            <li>웹툰</li>
+            <li>캘린더</li>
+            <li>스토리</li>
+            <li>게임</li>
+            <li>더보기🔽</li>
+        </ul>
+    </div>
+</body>
+</html>
