@@ -14,8 +14,9 @@
         }
         /* 2. container div -> flex container -> imgsec&ul 가로배치 */
         .container{
+            width: 1600px;
             display: flex;
-            background-color: rgba(0, 255, 255, 0.1);
+            /* background-color: rgba(0, 255, 255, 0.1); */
             padding: 0 10%;
             justify-content: space-between;
         }
@@ -24,11 +25,26 @@
             display: flex;
             align-items: center;
         }
+        .and-menu{
+            background-color: bisque;
+            padding: 5px 8px;
+            border-radius: 10px;
+        }
+        .and-menu:hover{
+            color: #ffffff;
+            background-color: black;
+            text-decoration: none;
+        }
         /* 4.li 형태 잡기 */
         li{
             margin: 0 15px;
         }
-
+        li:hover{
+            color: rgb(92, 69, 40);
+            text-decoration: underline;
+            text-underline-position: under;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -48,7 +64,7 @@
             <li>캘린더</li>
             <li>스토리</li>
             <li>게임</li>
-            <li>더보기🔽</li>
+            <li class="and-menu">더보기🔽</li>
         </ul>
     </div>
 </body>

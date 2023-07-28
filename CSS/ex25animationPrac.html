@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation practice</title>
+    <style>
+        .imgsec{
+            width: 200px;
+            height: 200px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+            animation-name: pepe;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(1, 0, 0, 1);
+        }
+        @keyframes pepe {
+            from{
+                background-image: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FIR7TI%2FbtqFbBIuly2%2FvKTuTr9hMckl7EGb8omMD1%2Fimg.jpg);
+            }
+            to{
+                width: 220px;
+                height: 220px;
+                background-image: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlKyrO%2FbtqFeOTfthP%2F2NHMlKoMQe7R4mTuIRKHvk%2Fimg.png);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="imgsec">
+
+    </div>
+</body>
+</html>

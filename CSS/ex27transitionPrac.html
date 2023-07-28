@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition practice</title>
+    <style>
+        /* 1. 너비 300px 높이 200px
+            테두리 두께 3px 버튼 틀 */
+        .outer{
+            width: 300px;
+            height: 100px;
+            border: 3px solid #000000;
+            margin: 200px;
+        }
+        /* 2.버튼 안에서 배경이 차오르는 부분 */
+        .inner{
+            width: 0%;
+            height: 100%;
+            background-color: coral;
+            transition-duration: 1s;
+        }
+        .outer:hover>.inner{
+            width: 100%;
+        }
+        /* 3.버튼에 글씨올리기 */
+        .textsec{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            bottom: 100%;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            animation-iteration-count: infinite;
+        }
+        .outer:hover .textsec{
+            animation-name: fullcolor;
+            animation-duration: 4s;
+        }
+        @keyframes fullcolor {
+            0%{color:red;}
+            28%{color:orange;}
+            42%{color:yellow;}
+            56%{color:green;}
+            70%{color:blue;}
+            84%{color: navy;}
+            100%{color: purple;}
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"> 
+        </div>
+        <div class="textsec">
+            Button
+        </div>
+    </div>
+</body>
+</html>

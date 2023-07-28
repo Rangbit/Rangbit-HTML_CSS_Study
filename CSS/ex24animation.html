@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            border-radius: 50%;
+            margin-top: 200px;
+
+            animation-name: boxAni;
+            animation-delay: 1s;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: cubic-bezier(0.4,-0.26, 0, 0.77);
+        }
+        @keyframes boxAni {
+            from{
+
+            }
+            to{
+                margin-left: 500px;
+                border-radius: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

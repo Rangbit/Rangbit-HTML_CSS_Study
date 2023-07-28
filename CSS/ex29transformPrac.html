@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform practice</title>
+    <style>
+        /* 
+        1. 확대됐을 때 넘쳐나는 이미지 부분 숨기기
+        2. 확대 효과 적용이 일정 시간에 걸쳐 일어나도록 하기
+        */
+        .container {
+            width: 450px;
+            height: 800px;
+            position: relative;
+            top: 50px;
+            left: 50px;
+            overflow: hidden;
+
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            transition-duration: 0.5s;
+        }
+        .card-front{
+            width: 100%;
+            height: 100%;
+        }
+        .card-back{
+            width: 100%;
+            height: 100%;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img class="card-front" src="https://i.pinimg.com/564x/6c/29/db/6c29dbad87f54ea15a53c8790209e294.jpg"
+                alt="">
+            <img class="card-back" src="https://i.pinimg.com/564x/71/4d/e9/714de98e25521df5550bcedcbb077417.jpg
+        " alt="">
+        </div>
+    </div>
+</body>
+
+</html>
