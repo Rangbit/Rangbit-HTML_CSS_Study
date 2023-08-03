@@ -24,19 +24,17 @@
 
         // 2. 과목수 만큼 과목 이름 입력
         for (let i = 0; i < subNum; i++) {
-            let inputName = prompt('점수를 입력할 과목을 입력하세요.');
-            subName.push(inputName);
+            subName.push(prompt('점수를 입력할 과목을 입력하세요.'));
         }
 
         // 3. 각 과목들의 점수를 입력
         for (let i = 0; i < subNum; i++) {
-            let inputScore = Number(prompt(`${subName[i]}의 점수를 입력하세요.`));
-            subScore.push(inputScore);
-            totalScore += inputScore;
+            subScore.push(Number(prompt(`${subName[i]}의 점수를 입력하세요.`)));
+            totalScore += subScore[i];
         }
         
         // 4. 총점, 평균 점수 도출
-        avgScore = totalScore / subNum;
+        avgScore = parseInt(totalScore / subNum);
         subName.push('총합');
         subName.push('평균');
         subScore.push(totalScore);
@@ -45,15 +43,35 @@
         // console.log(subName);
         // console.log(subScore);
         // 5. 각 점수, 총합, 평균을 HTML문저 내 테이블로 출력
-        document.write('<table><tr>')
+        /*
+        document.write('<table><tr>');
             for (let i = 0; i < subName.length; i++) {
-                document.write(`<td>${subName[i]}</td>`) 
+                document.write(`<td>${subName[i]}</td>`) ;
             }
-        document.write('</tr><tr>')
+        document.write('</tr><tr>');
             for (let i = 0; i < subScore.length; i++) {
-                document.write(`<td>${subScore[i]}</td>`) 
+                document.write(`<td>${subScore[i]}</td>`) ;
             }
-        document.write('</tr></table>')
+        document.write('</tr></table>');
+        */
+
+        let printTable = `
+            <table>
+                <tr>
+        `
+        for (let i = 0; i < subName.length; i++) {
+            printTable += (`<td>${subName[i]}</td>`) ;
+            }
+        printTable += `</tr>
+                       <tr>`
+        for (let i = 0; i < subScore.length; i++) {
+            printTable += (`<td>${subScore[i]}</td>`) ;
+            }
+        `
+                </tr>
+            </table>
+        `
+        document.write(printTable)
     </script>
 </body>
 </html>
