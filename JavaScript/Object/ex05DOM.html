@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="h1Tag">DOM 시작하기</h1>
+
+    <!-- Document Object Model : JavaScript가 HTML을 이해할 수 있게 해주는 주조
+    DOM Tree >> node로 구성된 모양
+    html 상위엔 document(문서노드) 가 있기때문에 HTML을 제어하기 위해서
+     document로 접근하여 HTML 호출 -->
+     <script>
+       let h1Element = document.getElementById('h1Tag');
+       console.log(h1Element);
+     </script>
+</body>
+</html>

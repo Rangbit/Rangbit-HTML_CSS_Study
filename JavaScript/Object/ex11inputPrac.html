@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input practice</title>
+</head>
+<body>
+    <h1>입력한 값을 h1태그로 출력해보기</h1>
+    <input type="text" id="inputTag">
+    <button onclick="getText()">h1 tag</button>
+    <div id="container"></div>
+
+    <script>
+        
+        // 1. 버튼클릭시
+        const getText = ()=>{
+            // 2. input 요소 가져오기
+            let inputTagFunc = document.getElementById('inputTag').value;
+            console.log(inputTagFunc);
+            // 3. 입력값 h1 태그로 출력하기
+            let domVal = document.getElementById('container');
+            console.log(domVal);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<body>
+    <input type="text" id="inputTag">
+    <button onclick="getText()">click</button>
+    <script>
+        // input, textarea, select요소 >> value속성으로 접근
+        
+        // 버튼 클릭시, input 요소 안의 텍스트를 출력
+        const getText = ()=>{
+            console.log('test')
+            let inputTag = document.getElementById('inputTag').value;
+            console.log(inputTag);
+            alert(inputTag);
+        }
+    </script>
+</body>
+</html>

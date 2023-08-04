@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM practice</title>
+</head>
+<body>
+    <span id="spanTag">0</span><br>
+    <button onclick="plusNum()">+1 증가</button>
+    <button onclick="minusNum()">-1 감소</button>
+    <script>
+        let spanTagFunc = document.getElementById('spanTag');
+        spanTagNum = 0;
+        const plusNum = ()=>{
+            spanTagFunc.innerHTML = spanTagNum+1;
+            spanTagNum++;
+        }
+        const minusNum = ()=>{
+            if(spanTagNum != 0){
+            spanTagFunc.innerHTML = spanTagNum-1;
+            spanTagNum--;
+            }
+        }
+    </script>
+</body>
+</html>

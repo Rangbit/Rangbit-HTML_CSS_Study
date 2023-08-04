@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM practice</title>
+</head>
+<body>
+    <h1>클릭 해보세요</h1>
+    <button onclick="h1click()">h1태그 생성</button>
+    <button onclick="tagclick()">a태그 생성</button>
+    <button onclick="ulclick()">ul태그 생성</button>
+    <div id="container">
+    </div>
+    <script>
+        // 1.태그를 생성할 공간인 div 요소 가져오기
+        let domVal = document.getElementById('container')
+        // 2. 버튼별로 가지고온 div 요소안에 태그 생성하기
+        // 2-1 h1 tag
+        const h1click = ()=>{
+            domVal.innerHTML += '<h1>Google</h1>';
+        }
+        // 2-2 a tag
+        const tagclick = ()=>{
+            domVal.innerHTML += '<a href="http://www.google.com">Google로 이동!</a>'
+        }
+        // 2-3 ul tag
+        const ulclick = ()=>{
+            domVal.innerHTML += '<ul><li>html</li><li>css</li><li>JS</li></ul>'
+        }
+    </script>
+</body>
+</html>

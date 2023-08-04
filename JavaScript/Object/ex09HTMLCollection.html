@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Collection</title>
+</head>
+<body>
+    <h3 id="h3Tag">점심 메뉴</h3>
+    <ul>
+        <li>한식</li>
+        <li>단식</li>
+        <li>분식</li>
+    </ul>
+    <p class="pTag">test</p>
+    <script>
+        // HTML collection -> 유사배열
+        // getElementsByTagName, getElementsByClassName.....and so on
+        let h3Element = document.getElementById('h3Tag');
+        console.log(h3Element);
+
+        let liList = document.getElementsByTagName('li')
+        console.log(liList);
+
+        console.log(liList[0].innerText);
+
+        for(let i of liList){
+            console.log(i.innerText);
+        }
+
+        let pElement = document.getElementsByClassName('pTag');
+        console.log(pElement);
+        console.log(pElement[0].innerText);
+
+        // liList.forEach(i => {
+        //     console.log(i.innerText);
+        // });
+    </script>
+</body>
+</html>

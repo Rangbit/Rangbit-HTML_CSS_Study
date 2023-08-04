@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM property</title>
+</head>
+<body>
+    <div id="container">
+        <p>Hello World</p>
+    </div>
+    <button onclick="textFunc()">TEXT</button>
+    <button onclick="htmlFunc()">HTML</button>
+
+    <script>
+        let domVal = document.getElementById('container');
+        console.log('요소가져오기 : ', domVal);
+
+        const textFunc = () => {
+            console.log('내용만 : ',domVal.innerText);
+            domVal.innerText = 'Wolrd';
+        }
+
+        const htmlFunc = ()=>{
+            domVal.innerHTML = '<h1>Wolrd</h1>'
+            console.log('태그까지 : ', domVal.innerHTML);
+        }
+    </script>
+</body>
+</html>
