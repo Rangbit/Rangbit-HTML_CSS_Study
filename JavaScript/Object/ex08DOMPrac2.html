@@ -11,15 +11,12 @@
     <button onclick="minusNum()">-1 감소</button>
     <script>
         let spanTagFunc = document.getElementById('spanTag');
-        spanTagNum = 0;
         const plusNum = ()=>{
-            spanTagFunc.innerHTML = spanTagNum+1;
-            spanTagNum++;
+            spanTagFunc.innerText = Number(spanTagFunc.innerText)+1;
         }
         const minusNum = ()=>{
-            if(spanTagNum != 0){
-            spanTagFunc.innerHTML = spanTagNum-1;
-            spanTagNum--;
+            if(Number(spanTagFunc.innerText) != 0){
+                spanTagFunc.innerText = Number(spanTagFunc.innerText)-1;
             }
         }
     </script>

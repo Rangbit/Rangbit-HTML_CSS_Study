@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Practice</title>
+</head>
+
+<body>
+    <button>click</button>
+    <br><br>
+    <!-- 타이머 -->
+    <div id="container"></div>
+    <!-- 1~10초까지 출력하면서 버튼클릭시 이모티콘 들어가기 -->
+    <script>
+        let inputContainer = document.getElementById('container');
+
+        document.querySelector('button').addEventListener('click', () => {
+            inputContainer.innerHTML += 'Click ✔<br>';
+        })
+        
+        for (let i = 0; i < 10; i++) {
+            setTimeout(() => {
+                inputContainer.innerHTML += `${i + 1}초<br>`
+            }, `${i*1000}`);
+            }
+    </script>
+</body>
+
+</html>

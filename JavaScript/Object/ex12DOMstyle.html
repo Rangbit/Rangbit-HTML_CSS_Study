@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM style</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <span id="spanID" class="spanClass"> 
+        아래 버튼을 클릭하면 이 텍스트의 색상과 크기가 변해요
+    </span><br>
+    <button onclick="getStyle()">Click</button>
+    <button onclick="getStyle2()">Click</button>
+    <script>
+        let spanElement = document.getElementById('spanID');
+        spanElement = document.getElementsByClassName('spanClass')[0];
+        spanElement = document.querySelector('#spanID');
+        spanElement = document.querySelectorAll('.spanClass')[0];
+        console.log(spanElement);
+        const getStyle = ()=>{
+            spanElement.style.fontSize = '25px';
+            spanElement.style.color = 'tomato';
+            spanElement.style.fontStyle = '900';
+
+        }
+        const getStyle2 = ()=>{
+            spanElement.style.fontSize = '';
+            spanElement.style.color = '';
+            spanElement.style.fontStyle = '';
+
+        }
+    </script>
+</body>
+</html>

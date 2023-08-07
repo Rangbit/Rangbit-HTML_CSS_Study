@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back</title>
+</head>
+<body>
+    <button>Click</button>
+    <script>
+        /*
+        Callback 함수
+        - 어떤 이벤트가 발생하거나, 특정 시점에 도달했을 때 시스템에서 호출하는 함수
+        - 함수에 파라미터로 들어가는 함수
+        */
+       // 1. 어떤 이벤트가 발생 했을 때 : addEventListener()
+       document.querySelector('button').addEventListener('click', ()=>{
+            console.log('🖤');
+       })
+       // 2. 특정시점에 도달했을 때
+       console.log('🧡');
+       setTimeout(() => {
+            console.log('💛');
+       }, 10000);
+       console.log('💚');
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image Practice</title>
+</head>
+
+<body>
+    <img id="imgId" class="imgClass" src="https://i.pinimg.com/564x/7c/f5/f4/7cf5f4abc09b127cce7fd0da3b403ef6.jpg" alt="" width="300px"><br>
+    <button onclick="changeImg()">image change</button>
+    <script>
+        let imgElement = document.getElementById('imgId');
+        imgElement = document.getElementsByClassName('imgClass')[0];
+        imgElement = document.querySelector('img');
+        imgElement = document.querySelector('#imgId');
+        imgElement = document.querySelectorAll('.imgClass')[0];
+        console.log(imgElement);
+        let cnt = 0;
+        const changeImg = () => {
+            if (cnt%2==0) {
+                imgElement.src = 'https://i.pinimg.com/564x/2d/9f/df/2d9fdfac6c48c516b22b5784d44556e6.jpg';
+            }else{
+                imgElement.src = 'https://i.pinimg.com/564x/7c/f5/f4/7cf5f4abc09b127cce7fd0da3b403ef6.jpg';
+            }
+            cnt++;
+        }
+
+
+    </script>
+</body>
+
+</html>

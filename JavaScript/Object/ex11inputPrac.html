@@ -16,11 +16,11 @@
         // 1. 버튼클릭시
         const getText = ()=>{
             // 2. input 요소 가져오기
-            let inputTagFunc = document.getElementById('inputTag').value;
+            let inputTagFunc = document.getElementById('inputTag');
             console.log(inputTagFunc);
             // 3. 입력값 h1 태그로 출력하기
-            let domVal = document.getElementById('container');
-            console.log(domVal);
+            document.getElementById('container').innerHTML += `<h1>${inputTagFunc.value}</h1>`;
+            inputTagFunc.value = '';
         }
     </script>
 </body>
