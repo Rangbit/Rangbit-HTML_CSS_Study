@@ -17,15 +17,26 @@
         imgElement = document.querySelector('#imgId');
         imgElement = document.querySelectorAll('.imgClass')[0];
         console.log(imgElement);
+
+        let img1 = 'https://i.pinimg.com/564x/7c/f5/f4/7cf5f4abc09b127cce7fd0da3b403ef6.jpg';
+        let img2 = 'https://i.pinimg.com/564x/2d/9f/df/2d9fdfac6c48c516b22b5784d44556e6.jpg';
         let cnt = 0;
         const changeImg = () => {
             if (cnt%2==0) {
-                imgElement.src = 'https://i.pinimg.com/564x/2d/9f/df/2d9fdfac6c48c516b22b5784d44556e6.jpg';
+                imgElement.src = img2;
             }else{
-                imgElement.src = 'https://i.pinimg.com/564x/7c/f5/f4/7cf5f4abc09b127cce7fd0da3b403ef6.jpg';
+                imgElement.src = img1;
             }
             cnt++;
         }
+
+        // const changeImg = () => {
+        //     if (imgElement.src == img1) {
+        //         imgElement.src == img2;
+        //     } else if (imgElement.src == img2){
+        //         imgElement.src = img1;
+        //     }
+        // }
 
 
     </script>

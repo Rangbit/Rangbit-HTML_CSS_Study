@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery start</title>
+</head>
+<body>
+    <h1>jquery start</h1>
+    <button id="textBtn">Text</button>
+    <button id="htmlBtn">Html</button>
+    
+    <!-- <script src="./code.jquery.com_jquery-3.7.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        // jQuery( $ ) >> wrapper 
+
+        // 1.h1 접근
+        let valJS = document.querySelector('h1')
+        console.log(valJS);
+        // let valJQ = jQuery('h1');
+        let valJQ = $('h1');
+        console.log(valJQ);
+
+        //  2. 버튼클릭시 내용만
+        $('#textBtn').click(()=>{
+            console.log('text');
+            $('h1').text('change text')
+        })
+
+        // 3. 버튼클릭시 태그까지
+        //  js(innerHTML) -> jq(html())
+        $('#htmlBtn').click(()=>{
+            $('h1').html(`<a href="#">a Tag</a>`)
+        })
+        </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>like practice</title>
+</head>
+<body>
+    <button class="likeBtn">좋아요 🥰</button>
+    <span>0</span>
+    <br><br>
+    <input type="text">
+    <button class="textBtn">댓글 작성</button>
+    <br>
+    <div class="container">
+        <p>
+            첫 댓글
+            <button class="removeBtn">삭제</button>
+        </p>
+    </div>
+    <script src="./code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script>
+        /*
+        속성 추가 및 제거
+        attr(추가할 속성, 속성값) : 속성 추가 메소드
+        removeAttr(제거할 속성) : 속성 제거 메소드
+        $(A).prepend(B) : B를 A요소 첫번째 위치에 추가 메소드
+        $(A).aqpend(B) : B를 A요소 마지막 위치에 추가 메소드
+
+        input 요소
+        val() : input 입력값 접근(JS -> .value 속성)
+        input 요소 값 비워주기 >> input 반환객체.val('')
+
+        부모 관련
+        parent() : 가장 가까운 부모요소 선택 메소드
+        parents() : 모든 부모요소 선택 메소드
+        closest(원하는 요소) : 모든 부모요소 대상, 원하는요소 접근가능
+        
+        1. 좋아요 버튼 클릭 시
+        버튼 안의 텍스트를 좋아요 -> 좋아요취소
+        숫자 0 -> 1
+        */
+        $(document).on('click','.likeBtn',(e)=>{
+            $(e.target).text('좋아요 취소😅');
+            $('span').text('1');
+            $(e.target).removeAttr('class');
+            $(e.target).attr('class', 'dislikeBtn');
+        })
+
+        /*
+        2. 좋아요취소 버튼 클릭 시
+        버튼 안의 텍스트를 좋아요취소 -> 좋아요
+        숫자 1 -> 0
+        */
+        $(document).on('click','.dislikeBtn',(e)=>{
+            $(e.target).text('좋아요');
+            $('span').text('0');
+            $(e.target).removeAttr('class');
+            $(e.target).attr('class', 'likeBtn');
+        })
+
+        /*
+        3. 댓글 작성 버튼 클릭 시
+           입력한 내용을 댓글로 + 삭제 버튼 생성
+        */
+        $(document).on('click', '.textBtn',(e)=>{
+            // js(value) >> jq(val())
+            let inputVal = $('input').val();
+            $('.container').append(`<p>${inputVal}
+            <button class="removeBtn">삭제</button>
+            </p>`)
+            // 문자열 초기화 해서 빈문자열 넣어주기
+            $('input').val('');
+        })
+       
+        /*
+        4. 삭제 버튼 클릭 시
+           해당 댓글+삭제 버튼 삭제
+        */    
+        $(document).on('click', '.removeBtn', (e)=>{
+            // $(e.target).parent().remove();
+            $(e.target).closest('p').remove();
+        })
+    </script>
+</body>
+</html>

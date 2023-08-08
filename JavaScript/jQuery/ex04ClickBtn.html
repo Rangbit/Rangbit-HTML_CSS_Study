@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dynamic event</title>
+    <style>
+        button {
+            width: 100px;
+            height: 60px;
+            margin: 5px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 2rem;
+        }
+
+        .click {
+            background-color: lightpink;
+        }
+
+        .on {
+            background-color: lightblue;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+</head>
+
+<body>
+    <button class='click'>click</button>
+    <button class='on'>on</button>
+    <br /><br /><br />
+
+    <script>
+        // click vs on
+        // 동적 이벤트 바인딩 차이
+        // click : 최초에 페이지를 로딩할 때 선언되어있던 
+        //         element에 이벤트 바인딩하고
+        //         더이상 동적으로 바인딩 하지 않음
+        // on : 동적으로 추가된 태그에 이벤트 추가
+
+        $(document).on("click", ".on", () => {
+            $("body").append("<button class='on'>on</button>");
+        });
+        $(".click").click(() => {
+            $("body").append("<button class='click'>click</button>");
+        });
+    </script>
+</body>
+
+</html>

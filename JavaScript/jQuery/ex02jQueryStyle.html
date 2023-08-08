@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery style</title>
+</head>
+<body>
+    <h1>jQuery style</h1>
+    <button>change</button>
+    
+    <script src="./code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script>
+        // 스타일 제어
+        // js(style) >> jq(css(property, value))
+        $('button').click(()=>{
+            // 1.한줄씩 입력
+            // $('h1').css('color', 'red');
+            // $('h1').css('background-color', 'black');
+            // $('h1').css('padding-left', '50px');
+
+            // 2.chain방식 입력
+            // .css 이후 리턴값에 계속 연산가능
+            $('h1').css('color', 'red')
+                   .css('background-color', 'black')
+                   .css('padding', '50px');
+
+            // 3. 객체형태 입력
+            $('h1').css({
+                'display' : 'flex',
+                'aline-items' : 'center',
+                'justify-content' : 'center'
+            })
+        })
+
+    </script>
+</body>
+</html>

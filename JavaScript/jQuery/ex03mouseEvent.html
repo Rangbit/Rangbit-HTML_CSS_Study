@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event</title>
+</head>
+<body>
+    <h1>Mouse Event</h1>
+    <h1>Mouse Event</h1>
+    <h1>Mouse Event</h1>
+    <button>change</button>
+    <script src="./code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script>
+        //  $(선택자).on(이벤트타입, 이벤트핸들러);
+        //  $(document).on(이벤트타입, 이벤트타겟, 이벤트핸들러);
+
+        // this : 호출된 HTML 객체를 저장
+        // ()=>{} 안에서 사용 X  대체>> (e)=>{(e.target)}
+        
+        // 1. 버튼클릭시 h1요소 파란색
+        // $('h1').on('click','.on', ()=>{
+        //     $('h1').css('color', 'blue');
+        // })
+        $(document).on('click','button', ()=>{
+            $('h1').css('color', 'blue');
+        })
+        // 2. h1 요소 마우스 오버시 빨간색
+        $(document).on('mouseover','h1', function(){
+            $('h1').css('color', 'red');
+            // 마우스 올라가는 부분만 이벤트
+            // $(this).css('color', 'red');
+        })
+        // 3. h1 요소 마우스 아웃시 검은색
+        $(document).on('mouseout','h1', ()=>{
+            $('h1').css('color', 'black');
+        })
+        // $(document).on('mouseout','h1', (event)=>{
+        //     $(event.target).css('color', 'black');
+        // })
+        $('button').css({
+            'width' : '200px',
+            'height' : '80px',
+            'font-size' : '28px',
+            'background-color' : 'black',
+            'color' : 'white'
+        })
+    </script>
+</body>
+</html>
