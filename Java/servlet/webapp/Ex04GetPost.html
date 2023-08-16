@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<!-- Get -->
+	<!-- 1. url에 데이터를 담아서 전송
+		 2. 데이터 길이에 제한
+		 3. 보안에 취약
+		 4. post방식보다 빠른 속도 -->
+	<form action="Ex04GetPost" method="get">
+		Name : <input type="text" name="name">
+		<input type="submit" value="get">
+	</form>
+	
+	<!-- Post -->
+	<!-- 1. 패킷의 body에 데이터를 담아서 전송
+		 2. 데이터 길이에 제한이 없음
+		 3. get 방식보다는 상대적으로 보안이 강함
+		 4. method 속성에 post -->
+	<form action="Ex04GetPost" method="post">
+		Name : <input type="text" name="name">
+		<input type="submit" value="post">
+	</form>	
+	
+</body>
+</html>
