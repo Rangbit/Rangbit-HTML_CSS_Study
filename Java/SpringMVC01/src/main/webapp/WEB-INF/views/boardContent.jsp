@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+<%pageContext.setAttribute("newLine", "\n"); %>
 
 	<div class="container">
 		<h2>Spring MVC01</h2>
@@ -30,16 +32,20 @@
 						</tr>
 						<tr>
 							<td>내용</td>
-							<td>${convo.content}</td>
+							<td>${fn:replace(convo.content, newLine, "<br>") }</td>
 						</tr>
 						<tr>
 							<td>작성자</td>
 							<td>${convo.writer}</td>
 						</tr>
+						<tr>
+							<td>작성일</td>
+							<td>${fn:split(convo.indate, " ")[0] }</td>
+						</tr>
 					<tr>
 						<td colspan="2" align="center">
 							<a href="boardSelectList.do" class="btn btn-primary">목록</a>
-							<a href="boardUpdate.do?idx=${convo.idx}" class="btn btn-success">수정</a>
+							<a href="boardUpdate.do/${convo.idx}" class="btn btn-success">수정</a>
 							<a href="boardDelete.do?idx=${convo.idx}" class="btn btn-warning">삭제</a>
 						</td>
 					</tr>

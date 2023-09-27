@@ -15,7 +15,7 @@
 	<delete id="boardDelete">
 		delete from board where idx=#{idx}
 	</delete>
-	<update id="boardUpdate" parameterType="com.board.entity.Board">
-		update board set title=#{title}, content=#{content}, writer=#{writer} where idx=#{idx} 
+	<update id="boardUpdateWrite" parameterType="com.board.entity.Board">
+		update board set title=#{title}, content=#{content} where idx=#{idx} 
 	</update>
 </mapper>

@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -64,6 +65,8 @@ public class BoardController {
 	// 게시글 상세보기  /boardContent.do
 	@GetMapping("/boardContent.do")  // boardContent.do?idx=5
 	public String boardContent(@RequestParam("idx") int num, Model model) {
+		// 조회수 올리기
+		boardMapper.boardCount(num);
 		// boardMapper 사용해서 Board에 담고제목을 입력하세요
 		Board convo = boardMapper.boardContent(num);
 		// model 영역에 저장 후
@@ -80,13 +83,22 @@ public class BoardController {
 		return "redirect:/boardSelectList.do";
 	}
 	
-	// 게시글 수정  /boardUpdate.do
-	@GetMapping("/boardUpdate.do")  // boardContent.do?idx=5
-	public String boardUpdate(int idx, Model model) {
+	// 게시글 수정페이지 이동  /boardUpdate.do
+	@GetMapping("/boardUpdate.do/{idx}")  // boardContent.do?idx=5
+	public String boardUpdate(@PathVariable("idx") int idx, Model model) {
 		// boardMapper 사용해서 Board에 담고
 		Board convo = boardMapper.boardContent(idx);
 		model.addAttribute("convo", convo);
 		return "boardUpdate";
+	}
+	
+	// 게시글 수정  /boardUpdate.do
+	@PostMapping("/boardUpdateWrite.do")  // boardContent.do?idx=5
+	public String boardUpdateWrite(Board board) {
+		// boardMapper 사용해서 Board에 담고
+		System.out.println(board.toString());
+		boardMapper.boardUpdateWrite(board);
+		return "redirect:/boardSelectList.do";
 	}
 	
 }

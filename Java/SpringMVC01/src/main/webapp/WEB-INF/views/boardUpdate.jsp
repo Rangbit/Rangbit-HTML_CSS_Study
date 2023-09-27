@@ -19,10 +19,10 @@
   <div class="panel panel-default">
     <div class="panel-heading">Board</div>
     <div class="panel-body">
-		<form action="boardUpdate.do">
+		<form action="../boardUpdateWrite.do" method="post">
 			<table class="table">
 				<!-- title, content, writer -->
-				<input type="hidden">
+				<input type="hidden" name="idx" value="${convo.idx}">
 				<tr>
 					<td>제목</td>
 					<td><input type="text" name="title" value="${convo.title}" class="form-control"></td>
@@ -39,7 +39,7 @@
 				<tr>
 					<td colspan="2" align="center">
 						<button type="submit" class="btn btn-success">수정</button>
-						<a href="boardSelectList.do" class="btn btn-primary">목록</a>
+						<a href="../boardSelectList.do" class="btn btn-primary">목록</a>
 					</td>
 				</tr>
 			</table>
