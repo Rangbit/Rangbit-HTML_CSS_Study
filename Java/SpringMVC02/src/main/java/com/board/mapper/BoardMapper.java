@@ -17,6 +17,7 @@ public interface BoardMapper {
 
 	public Board boardContent(int num);
 
+	
 	public void boardDelete(int num);
 
 	public void boardUpdateWrite(Board board);

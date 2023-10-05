@@ -46,5 +46,37 @@ public class BoardController {
 		return list;
 	}
 	
+	// 게시글 등록하기
+	@PostMapping("/boardInsert.do")
+	public @ResponseBody void boardInsert(Board board) {
+		boardMapper.boardInsert(board);
+		System.out.println("[게시글 등록 성공]");
+	}
+	
+	// 게시글 삭제하기
+	@GetMapping("/boardDelete.do")
+	public @ResponseBody void boardDelete(@RequestParam("idx") int idx) {
+		boardMapper.boardDelete(idx);
+		System.out.println("[게시글 삭제 성공]");
+	}
+	
+	// 조회수 올리기
+	@GetMapping("/boardCount.do")
+	public @ResponseBody void boardCount(@RequestParam("idx")  int idx) {
+		boardMapper.boardCount(idx);
+	}
+	
+	// DB 업데이트
+	@PostMapping("/boardUpdateWrite.do")
+	public @ResponseBody void boardUpdateWrite(Board board) {
+		boardMapper.boardUpdateWrite(board);
+	}
+	
+	// 게시글 가져오기
+	@GetMapping("/boardContent.do")
+	public @ResponseBody Board boardContent(@RequestParam("idx")  int idx) {
+		Board board = boardMapper.boardContent(idx);
+		return board;
+	}
 	
 }
