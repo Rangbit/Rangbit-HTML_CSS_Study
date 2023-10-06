@@ -14,9 +14,9 @@ public class BoardController {
 	private BoardMapper boardMapper;
 	
 	// index.jsp로 이동하는 동기방식 메소드
-	@RequestMapping("/")
+	@RequestMapping("/boardMain.do")
 	public String index() {
-		return "index";
+		return "board/index";
 	}
 	
 	

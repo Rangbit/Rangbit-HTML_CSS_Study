@@ -3,7 +3,7 @@
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -198,9 +198,9 @@
   </style>
 </head>
 <body>
- 
+ <jsp:include page="../components/header.jsp"></jsp:include>
 <div class="container">
-  <h2>Spring MVC02</h2>
+  <h2>Spring MVC03</h2>
   <div class="panel panel-default">
     <div class="panel-heading">Board</div>
     <div class="panel-body" id="view">
