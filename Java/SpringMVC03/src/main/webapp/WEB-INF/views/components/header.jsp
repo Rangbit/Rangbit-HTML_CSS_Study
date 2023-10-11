@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/d2846f63b1.js" crossorigin="anonymous"></script>
   
   <style type="text/css">
   
@@ -44,6 +45,10 @@
   .navbar-inverse .navbar-nav>li>a,
   .navbar-inverse .navbar-brand {
   	color : #000000;
+  }
+  
+  .fa-solid {
+  	padding-right: 5px;
   }
   
   </style>
@@ -91,11 +96,21 @@ function hamberger(){
           </ul>
         </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      
+      <c:if test="${empty mvo}">
+	  <ul class="nav navbar-nav navbar-right">
         <li><a class="nav-link" href="${contextPath }/joinForm.do"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a class="nav-link" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
+      </c:if>
       
+      <c:if test="${not empty mvo}">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-link" href="#"><span class="glyphicon glyphicon-user"></span><i class="fa-solid fa-user"></i>Mypage</a></li>
+        <li><a class="nav-link" href="#"><span class="glyphicon glyphicon-log-in"></span><i class="fa-solid fa-image"></i>Profile</a></li>
+        <li><a class="nav-link" href="${contextPath }/logout.do"><span class="glyphicon glyphicon-log-in"></span><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+      </ul>
+      </c:if>
     </div>
   </div>
 </nav>

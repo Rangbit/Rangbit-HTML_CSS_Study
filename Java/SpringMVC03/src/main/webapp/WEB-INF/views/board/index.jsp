@@ -16,6 +16,7 @@
   $(document).ready(()=>{
 	  // HTML 구조가 다 로딩이 된 후에 loadList() 실행
 		  loadList();
+	  
   });
   
   	function loadList(){

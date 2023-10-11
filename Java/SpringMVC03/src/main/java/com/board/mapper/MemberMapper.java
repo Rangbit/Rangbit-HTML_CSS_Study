@@ -9,5 +9,7 @@ public interface MemberMapper {
 
 	public Member registerCheck(String memId);
 
+	public int join(Member member);
+
 }
 

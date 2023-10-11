@@ -26,7 +26,6 @@ import com.board.mapper.BoardMapper;
 @RequestMapping("/board")
 public class BoardRestController {
 
-	
 	@Autowired
 	private BoardMapper boardMapper;
 

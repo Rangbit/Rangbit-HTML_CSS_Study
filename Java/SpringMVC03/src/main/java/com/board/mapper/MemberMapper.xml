@@ -5,4 +5,9 @@
 	<select id="registerCheck" resultType="com.board.entity.Member">
 		select * from member where memId = #{memId}
 	</select>
+	
+	<insert id="join" parameterType="com.board.entity.Member">
+		insert into member(memId, memPw, memName, memAge, memGender, memEmail)
+		values(#{memId}, #{memPw}, #{memName}, #{memAge}, #{memGender}, #{memEmail})
+	</insert>
 </mapper>
