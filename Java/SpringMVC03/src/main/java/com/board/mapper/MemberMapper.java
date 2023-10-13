@@ -11,5 +11,11 @@ public interface MemberMapper {
 
 	public int join(Member member);
 
+	public Member login(Member member);
+
+	public int update(Member member);
+
+	public int updateImage(Member mvo);
+
 }
 

@@ -99,15 +99,15 @@ function hamberger(){
       
       <c:if test="${empty mvo}">
 	  <ul class="nav navbar-nav navbar-right">
-        <li><a class="nav-link" href="${contextPath }/joinForm.do"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a class="nav-link" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a class="nav-link" href="${contextPath }/joinForm.do"><span class="glyphicon glyphicon-user"></span><i class="fa-solid fa-user"></i> Sign Up</a></li>
+        <li><a class="nav-link" href="${contextPath }/loginForm.do"><span class="glyphicon glyphicon-log-in"></span><i class="fa-solid fa-arrow-right-from-bracket"></i> Login</a></li>
       </ul>
       </c:if>
       
       <c:if test="${not empty mvo}">
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="nav-link" href="#"><span class="glyphicon glyphicon-user"></span><i class="fa-solid fa-user"></i>Mypage</a></li>
-        <li><a class="nav-link" href="#"><span class="glyphicon glyphicon-log-in"></span><i class="fa-solid fa-image"></i>Profile</a></li>
+        <li><a class="nav-link" href="${contextPath }/updateForm.do"><span class="glyphicon glyphicon-user"></span><i class="fa-solid fa-user"></i>Mypage</a></li>
+        <li><a class="nav-link" href="${contextPath }/imageForm.do"><span class="glyphicon glyphicon-log-in"></span><i class="fa-solid fa-image"></i>Profile</a></li>
         <li><a class="nav-link" href="${contextPath }/logout.do"><span class="glyphicon glyphicon-log-in"></span><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
       </ul>
       </c:if>

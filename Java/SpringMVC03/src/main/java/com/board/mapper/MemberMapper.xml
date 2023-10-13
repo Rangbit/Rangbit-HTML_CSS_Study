@@ -10,4 +10,16 @@
 		insert into member(memId, memPw, memName, memAge, memGender, memEmail)
 		values(#{memId}, #{memPw}, #{memName}, #{memAge}, #{memGender}, #{memEmail})
 	</insert>
+	
+	<select id="login" parameterType="com.board.entity.Member" resultType="com.board.entity.Member">
+		select * from member where memId = #{memId} and memPw = #{memPw}
+	</select>
+
+	<update id="update" parameterType="com.board.entity.Member">
+		update member set memPw=#{memPw}, memName=#{memName}, memAge=#{memAge}, memGender=#{memGender}, memEmail=#{memEmail} where memId=#{memId} 
+	</update>
+
+	<update id="updateImage" parameterType="com.board.entity.Member">
+		update member set memProfile=#{memProfile} where memId=#{memId} 
+	</update>
 </mapper>
