@@ -6,8 +6,8 @@
 		select * from board order by indate desc
 	</select>
 	<insert id="boardInsert" parameterType="com.board.entity.Board">
-		insert into board(title, content, writer)
-		values(#{title}, #{content}, #{writer})
+		insert into board(memId, title, content, writer)
+		values(#{memId}, #{title}, #{content}, #{writer})
 	</insert>
 	<select id="boardContent" resultType="com.board.entity.Board">
 		select * from board where idx=#{idx}

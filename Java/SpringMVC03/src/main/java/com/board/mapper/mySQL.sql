@@ -2,8 +2,11 @@
 -- auto_increment 값을 넣지않아도 자동으로 +1
 -- default now() 기본값으로 현재값 넣기
 -- 작성할 때 드래그해서 alt + X
+drop table board;
+
 create table board(
 	idx int not null auto_increment,
+	memId varchar(100) not null,
 	title varchar(100) not null,
 	content varchar(2000) not null,
 	writer varchar(100) not null,
